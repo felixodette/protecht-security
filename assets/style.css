@@ -177,6 +177,10 @@ iframe {
 
 .contact100-form-title {
   display: block;
+  position: absolute;
+  justify-content: center;
+  top: 10%;
+  left: 30%;
   font-family: Poppins-Bold;
   font-size: 39px;
   color: #333333;
