@@ -63,3 +63,25 @@ function hideValidate(input) {
 
   $(thisAlert).removeClass('alert-validate');
 }})
+
+const homePage = document.querySelector('[data-home]');
+const aboutPage = document.querySelector('[data-about]');
+const companyLink = document.querySelector('[data-link-company]');
+const headerSection = document.querySelector('[data-header]');
+const homeLink = document.querySelector('[data-link-home]');
+const aboutLink = document.querySelector('[data-link-about]');
+const sections = [homePage, headerSection];
+
+aboutLink.addEventListener('click', () => {
+  sections.forEach(section => section.classList.add('inactive'));
+  aboutPage.classList.remove('inactive');
+  homeLink.classList.remove('active');
+  companyLink.classList.add('active');
+});
+
+homeLink.addEventListener('click', () => {
+  sections.forEach(section => section.classList.remove('inactive'));
+  companyLink.classList.remove('active');
+  homeLink.classList.add('active');
+  aboutPage.classList.add('inactive');
+});
