@@ -66,11 +66,14 @@ function hideValidate(input) {
 
 const homePage = document.querySelector('[data-home]');
 const aboutPage = document.querySelector('[data-about]');
+const securityPage = document.querySelector('[data-security]');
 const companyLink = document.querySelector('[data-link-company]');
 const headerSection = document.querySelector('[data-header]');
 const homeLink = document.querySelector('[data-link-home]');
 const aboutLink = document.querySelector('[data-link-about]');
-const sections = [homePage, headerSection];
+const securityLink = document.querySelector('[data-link-security]');
+const sections = [homePage, headerSection, securityPage];
+
 
 aboutLink.addEventListener('click', () => {
   sections.forEach(section => section.classList.add('inactive'));
