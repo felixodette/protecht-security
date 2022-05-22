@@ -1,9 +1,17 @@
+body {
+  overflow-x: hidden;
+}
+
 .parallax {
   background-image: url("img/bg-masthead.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.inactive {
+  display: none;
 }
 
 /*//////////////////////////////////////////////////////////////////
