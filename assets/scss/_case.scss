@@ -1,0 +1,165 @@
+/*----------------------------------------*/
+/*  16. CASE CSS START
+/*----------------------------------------*/
+
+.case{
+    &__area{}
+    &__item{
+        @include border-radius(10px);
+        & img{
+            @include border-radius(10px);
+        }
+        &:hover{
+            & .case__thumb{
+                &::after{
+                    opacity: 0;
+                }
+                &::before{
+                    opacity: .9;
+                }
+            }
+            & .case__info{
+                bottom: 0;
+                visibility: hidden;
+                opacity: 0;
+                &-2{
+                    top: 25px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            & .case__plus{
+                right: 30px;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__thumb{
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -moz-linear-gradient( 0deg, rgb(26,21,46) 0%, rgba(26,21,46,0) 100%);
+            background-image: -webkit-linear-gradient( 0deg, rgb(26,21,46) 0%, rgba(26,21,46,0) 100%);
+            background-image: -ms-linear-gradient( 0deg, rgb(26,21,46) 0%, rgba(26,21,46,0) 100%);
+            background-image: linear-gradient( 0deg, rgb(26,21,46) 0%, rgba(26,21,46,0) 100%);
+            z-index: 1;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -moz-linear-gradient( 60deg, rgb(255,36,247) 0%, rgb(120,28,226) 100%);
+            background-image: -webkit-linear-gradient( 60deg, rgb(255,36,247) 0%, rgb(120,28,226) 100%);
+            background-image: -ms-linear-gradient( 60deg, rgb(255,36,247) 0%, rgb(120,28,226) 100%);
+            background-image: linear-gradient( 60deg, rgb(255,36,247) 0%, rgb(120,28,226) 100%);
+            opacity: 0;
+        }
+    }
+    &__info{
+        left: 40px;
+        bottom: 25px;
+        z-index: 2;
+        @media #{$lg}{
+            left: 15px;
+        }
+        & h4{
+            font-size: 20px;
+            margin-bottom: 0;
+            color: $white;
+        }
+        & span{
+            color: $grey-14;
+        }
+        &-2{
+            left: 40px;
+            top: 0;
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            @media #{$lg}{
+                left: 15px;
+            }
+        }
+    }
+    &__plus{
+        right: -30px;
+        bottom: 30px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+        & button{
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            line-height: 38px;
+            border: none;
+            text-align: center;
+            background: none;
+            border: 2px solid rgba($color: $white, $alpha: .4);
+            color: $white;
+            font-size: 20px;
+            @include border-radius(50%);
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                color: $black;
+                border-color: $white;
+                background: $white
+            }
+            &:hover{
+                & i:first-child{
+                    left: -120%;
+                }
+                & i:last-child{
+                    left: 50%;
+                }
+            }
+            & i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -3px;
+                @include transform(translate(-50%, -50%));
+                @include transition(.2s);
+                &:last-child{
+                    left: 120%;
+                }
+            }
+        }
+    }
+    &__menu{
+        & button{
+            display: inline-block;
+            min-height: 40px;
+            line-height: 40px;
+            color: $black-soft-3;
+            padding: 0 20px;
+            font-weight: 700;
+            font-family: $frank;
+            background: transparent;
+            @media #{$xs}{
+                padding: 0 15px;
+            }
+            &.active{
+                background: $white;
+                color: $theme-color;
+                @include box-shadow(0px 10px 30px 0px rgba(2, 0, 40, 0.1));
+            }
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.fancybox-image, .fancybox-spaceball {
+	@include border-radius(10px);
+}

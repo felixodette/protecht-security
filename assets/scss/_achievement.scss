@@ -1,0 +1,56 @@
+/*----------------------------------------*/
+/*  13. ACHIEVEMENT CSS START
+/*----------------------------------------*/
+
+.achievement{
+    &__area{}
+    &__content{
+        & p{
+            margin-bottom: 50px;
+            line-height: 30px;
+        }
+    }
+    &__thumb{
+        @media #{$sm}{
+            padding-left: 0;
+            margin-top: 50px;
+        }
+        @media #{$xs}{
+            padding-left: 0;
+            margin-top: 50px;
+        }
+    }
+    &__wrapper{}
+    &__item{
+        padding-right: 45px;
+        @media #{$md}{
+            padding-right: 85px;
+        }
+        & img{
+            margin-bottom: 25px;
+            backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -moz-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -ms-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -o-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        }
+        & h3{
+            font-size: 18px;
+        }
+        &:hover{
+            & img{
+                -webkit-transform: translate3d(0,-10px,0);
+                -moz-transform: translate3d(0,-10px,0);
+                -ms-transform: translate3d(0,-10px,0);
+                -o-transform: translate3d(0,-10px,0);
+                transform: translate3d(0,-10px,0);
+            }
+        }
+    }
+}

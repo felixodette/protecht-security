@@ -1,0 +1,108 @@
+/*----------------------------------------*/
+/*  05. ABOUT CSS START
+/*----------------------------------------*/
+
+.about{
+    &__area{
+
+    }
+    &__thumb{
+        position: relative;
+        &::after{
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            content: '';
+            width: 100%;
+            height: 320px;
+            @include border-radius(20px);
+            background: $green-2;
+            z-index: -1;
+            @media #{$lg}{
+                right: -45px;
+            }
+        }
+        &-2{
+            z-index: 1;
+            &::before{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 400px;
+                height: 400px;
+                @include border-radius(50%);
+                background: $grey-17;
+                z-index: -1;
+                @media #{$xs}{
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: 100px;
+        left: -27px;
+        z-index: -1;
+    }
+    &__content{
+        position: relative;
+        z-index: 1;
+        @media #{$md}{
+            margin-top: 50px;
+        }
+        @media #{$sm}{
+            margin-top: 50px;
+        }
+        @media #{$xs}{
+            margin-top: 50px;
+        }
+        & p{
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 40px;
+        }
+    }
+    &__list{
+        margin-bottom: 55px;
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                &:hover{
+                    & span{
+                        color: $theme-color;
+                        & i{
+                            background: $theme-color;
+                            color: $white;
+                        }
+                    }
+                }
+                & span{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $black;
+                    position: relative;
+                    padding-left: 30px;
+                    & i{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        @include transform(translateY(-50%));
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 10px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: $theme-color;
+                        @include border-radius(50%);
+                        background: $grey-4;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

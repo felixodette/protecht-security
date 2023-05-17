@@ -1,0 +1,356 @@
+/*----------------------------------------*/
+/*  05. SERVICES CSS START
+/*----------------------------------------*/
+
+.services{
+    &__area{
+        &-2{
+            @media #{$md}{
+                margin-top: 350px;
+            }
+            @media #{$sm}{
+                margin-top: 350px;
+            }
+            @media #{$xs}{
+                margin-top: 350px;
+            }
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+    }
+    &__item{
+        padding-right: 45px;
+        @media #{$lg}{
+            padding-right: 15px;
+        }
+        &:hover{
+            & .services__icon{
+                & img{
+                    -webkit-transform: translate3d(0,-10px,0);
+                    -moz-transform: translate3d(0,-10px,0);
+                    -ms-transform: translate3d(0,-10px,0);
+                    -o-transform: translate3d(0,-10px,0);
+                    transform: translate3d(0,-10px,0);
+                }
+            }
+        }
+        &-2{
+            padding: 40px;
+            margin-left: 2px;
+            margin-right: 2px;
+            @media #{$lg}{
+                padding: 30px;
+            }
+            @media #{$sm}{
+                padding: 30px;
+            }
+            &:hover{
+                @include box-shadow(0px 20px 20px 0px rgba(3, 0, 53, 0.06));
+            }
+        }
+    }
+    &__icon{
+        min-height: 45px;
+        & img{
+            backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -moz-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -ms-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            -o-transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+            transition: transform .3s cubic-bezier(.21,.6,.44,2.18);
+        }
+        &-wrapper{
+
+        }
+        &-item{
+            @media #{$lg}{
+                margin-right: 40px;
+            }
+            @media #{$xs}{
+                margin-right: 0px;
+            }
+            & .icon{
+
+            }
+            & .text{
+                & h3{
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &__content{
+        & h3{
+            font-size: 22px;
+            font-weight: 900;
+            &:hover{
+                & a{
+                    color: $theme-color;
+                }
+            }
+        }
+        &-2{
+            & h3{
+                margin-bottom: 0;
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+            }
+            & p{
+                margin-bottom: 0;
+            }
+        }
+        &-3{
+            @media #{$lg}{
+                padding-left: 15px;
+            }
+            @media #{$md}{
+                margin-top: 50px;
+            }
+            @media #{$sm}{
+                margin-top: 50px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            @media #{$xs}{
+                margin-top: 50px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            & h3{
+                font-size: 30px;
+            }
+            & p{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__nav{
+        & .nav{
+
+        }
+        & .nav-item{
+            margin-right: 80px;
+            @media #{$lg}{
+                margin-right: 30px;
+            }
+            @media #{$sm}{
+                margin-right: 30px;
+            }
+            @media #{$xs}{
+                margin-right: 0px;
+            }
+        }
+        & .nav-link{
+            padding: 0;
+            border: 0;
+            @include border-radius(0);
+            background: transparent;
+            font-size: 18px;
+            color: $black;
+            font-weight: 500;
+            & i{
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                color: $theme-color;
+                margin-right: 18px;
+                background: $white;
+                @include box-shadow(0px 10px 30px 0px rgba(8, 2, 46, 0.1));
+                @include border-radius(50%);
+            }
+            &.active{
+                background: transparent;
+                color: $blue-2;
+            }
+        }
+    }
+    &__tab{
+        @include border-radius(10px);
+    }
+    &__thumb{
+        @media #{$md}{
+            padding-left: 70px;       
+        }
+        @media #{$sm}{
+            padding-left: 30px;       
+        }
+        @media #{$xs}{
+            padding-left: 15px;       
+        }
+    }
+    &__text{
+        & h3{
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        & p{
+            margin-bottom: 45px;
+            font-size: 18px;
+            line-height: 30px;
+            & span{
+                color: $theme-color;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 2px;
+                    background: $theme-color;
+                }
+            }
+        }
+        & h4{
+            font-size: 18px;
+            font-family: $lato;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    }
+    &__list{
+        & ul{
+            & li{
+                font-size: 18px;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 15px;
+                &::after{
+                    position: absolute;
+                    content: '\f058';
+                    left: 0;
+                    top: 1px;
+                    font-family: "Font Awesome 5 Pro";
+                    font-size: 16px;
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    &__widget{
+        padding: 43px 40px;
+        padding-bottom: 45px;   
+        @media #{$lg}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$xs}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &-title{
+            & h4{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+        &_content{
+
+        }
+    }
+    &__link{
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & a{
+                    padding-left: 20px;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '\f105';
+                        left: 0;
+                        top: 0;
+                        font-family: "Font Awesome 5 Pro";
+                        font-size: 16px;
+                        color: $theme-color;
+                    }
+                    &:hover{
+                        color: $theme-color;
+                        &::after{
+                            left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__form{
+        & input{
+            width: 100%;
+            height: 50px;
+            border: 2px solid transparent;
+            background: $white;
+            @include border-radius(10px);
+            padding: 0 20px;
+            margin-bottom: 20px;
+            &::placeholder{
+                color: $grey-20;
+            }
+            &:focus{
+                border-color: $theme-color;
+                outline: none;
+                &::placeholder{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__action{
+        padding: 15px 30px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            top: auto;
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            height: 0;
+            background: $theme-color;
+        }
+        &:hover{
+            &::after{
+                top: 0;
+                bottom: auto;
+                height: 100%;
+            }
+        }
+        & a{
+            margin-bottom: 0;
+            display: block;
+            & i{
+                color: $theme-color;
+                padding-right: 15px;
+            }
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+    &__sidebar{
+        @media #{$xs}{
+            margin-right: 0;
+        }
+    }
+}
+
+
+@media #{$xs}{
+    .services__nav .nav-pills{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,153 @@
+/*----------------------------------------*/
+/*  10. BRAND CSS START
+/*----------------------------------------*/
+
+.brand{
+    &__area{
+    }
+    &__subtitle{
+        & p{
+            font-size: 16px;
+            padding-right: 120px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+    }
+    &__item{
+        margin-bottom: 90px;
+        text-align: center;
+        & img{
+            width: inherit !important;
+            display: inline-block !important;
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            
+            &.square{
+                top: 22%;
+                left: 0;
+                animation: square 10s linear 0s infinite alternate;
+                -webkit-animation: square 10s linear 0s infinite alternate;
+            }
+            &.circle{
+                top: 44%;
+                left: 3%;
+                animation: circle 10s linear 0s infinite alternate;
+                -webkit-animation: circle 10s linear 0s infinite alternate;
+            }
+            &.circle-2{
+                right: 3%;
+                top: 46%;
+                animation: circle2 10s linear 0s infinite alternate;
+                -webkit-animation: circle2 10s linear 0s infinite alternate;
+            }
+            &.triangle{
+                right: 6%;
+                bottom: 38%;
+                animation: trinlge 5s linear 0s infinite alternate;
+                -webkit-animation: trinlge 5s linear 0s infinite alternate;
+}
+        }
+    }
+}
+
+
+
+@keyframes square{
+    0%{
+      transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
+      -moz-transform: translateY(-100px);
+      -ms-transform: translateY(-100px);
+      -o-transform: translateY(-100px);
+    }
+    100%{
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+    }
+}
+
+@keyframes circle{
+  0%{
+    transform: translateX(-100px);
+    rotate: 0deg;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+  }
+  100%{
+    transform: translateY(-100px);
+    rotate: 180deg;
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+  }
+}
+
+@keyframes circle2{
+    0%{
+      transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
+      -moz-transform: translateY(-100px);
+      -ms-transform: translateY(-100px);
+      -o-transform: translateY(-100px);
+    }
+    25%{
+      transform: translateX(-50px);
+      -webkit-transform: translateX(-50px);
+      -moz-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+      -o-transform: translateX(-50px);
+    }
+    75%{
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+    }
+    100%{
+      transform: translateY(100px);
+      -webkit-transform: translateY(100px);
+      -moz-transform: translateY(100px);
+      -ms-transform: translateY(100px);
+      -o-transform: translateY(100px);
+    }
+}
+@keyframes trinlge{
+    0%{
+      transform: translateY(-50px);
+      -webkit-transform: translateY(-50px);
+      -moz-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+      -o-transform: translateY(-50px);
+}
+    25%{
+      transform: translateX(-50px);
+      -webkit-transform: translateX(-50px);
+      -moz-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+      -o-transform: translateX(-50px);
+    }
+    75%{
+      transform: translateY(30px);
+      -webkit-transform: translateY(30px);
+      -moz-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+      -o-transform: translateY(30px);
+}
+    100%{
+      transform: translateY(40px);
+      -webkit-transform: translateY(40px);
+      -moz-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+      -o-transform: translateY(40px);
+}
+}

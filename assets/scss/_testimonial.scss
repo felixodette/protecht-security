@@ -1,0 +1,92 @@
+/*----------------------------------------*/
+/*  15. TESTIMONIAL CSS START
+/*----------------------------------------*/
+
+.testimonial{
+    &__area{}
+    &__thumb{
+        position: relative;
+        z-index: 1;
+        @media #{$md}{
+            padding-top: 0;
+            padding-bottom: 70px;
+        }
+        @media #{$sm}{
+            padding-top: 0;
+            padding-bottom: 70px;
+        }
+        @media #{$xs}{
+            padding-top: 0;
+            padding-bottom: 70px;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            right: 35px;
+            top: 21%;
+            width: 85%;
+            height: 85%;
+            z-index: -1;
+            background: url('../img/icon/testimonial/border.png');
+            @include background();
+            background-size: contain;
+            @media #{$lg}{
+                display: none;
+            }
+            @media #{$md}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }
+    }
+    &__content{
+        padding-bottom: 70px;
+    }
+    &__item{
+        & p{
+            font-size: 24px;
+            line-height: 34px;
+            font-family: $frank;
+            margin-bottom: 25px;
+        }
+    }
+    &__info{
+        & h4{
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__slider{
+        & .slick-dots{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            width: auto;
+            & li{
+                width: 14px;
+                height: 14px;
+                background: transparent;
+                border: 2px solid rgba($color: $white, $alpha: .4);
+                @include border-radius(50%);
+                margin-right: 10px;
+                @include transition(.3s);
+                & button::before{
+                    display: none;
+                }
+                &.slick-active{
+                    background: $white;
+                    border-color: $white;
+                }
+            }
+        }
+    }
+}

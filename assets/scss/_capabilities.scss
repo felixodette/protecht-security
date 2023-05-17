@@ -1,0 +1,53 @@
+/*----------------------------------------*/
+/*  06. CAPABILITIES CSS START
+/*----------------------------------------*/
+
+.capabilities{
+    &__content{
+        @media #{$md}{
+            position: relative;;
+        }
+        @media #{$sm}{
+            position: relative;;
+        }
+        @media #{$xs}{
+            position: relative;;
+        }
+    }
+    &__thumb{
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        @include background();
+        @media #{$md}{
+            display: none;
+        }
+        @media #{$sm}{
+            display: none;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__shape{
+        left: 0;
+        top: -165px;
+    }
+    &__list{
+        & ol{
+            & li{
+                list-style: inherit;
+                margin-left: 22px;
+                margin-bottom: 25px;
+                font-size: 22px;
+                color: $black-soft;
+                font-family: $frank;
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+

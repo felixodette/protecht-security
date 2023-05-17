@@ -1,0 +1,57 @@
+/*----------------------------------------*/
+/*  08. CTA CSS START
+/*----------------------------------------*/
+
+.cta{
+    &__area{
+        @include background();
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -moz-linear-gradient( 60deg, #690ed0 0%, #170da2 100%);
+            background-image: -ms-linear-gradient( 60deg, #690ed0 0%, #170da2 100%);
+            background-image: -webkit-linear-gradient( 60deg, #690ed0 0%, #170da2 100%);
+            background-image: linear-gradient( 60deg, #690ed0 0%, #170da2 100%);
+            opacity: .8;
+        }
+    }
+    &__content{
+        & span{
+            font-family: $frank;
+            font-size: 20px;
+            color: $grey-3;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        & h1{
+            font-size: 70px;
+            color: $white;
+            font-weight: 900;
+            margin-bottom: 50px;
+            @media #{$md}{
+                font-size: 55px;
+            }
+            @media #{$sm}{
+                font-size: 40px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+            }
+        }
+    }
+    &__btn{
+        & a{
+            &:first-child{
+                margin-right: 30px;
+                @media #{$xs}{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+/*----------------------------------------*/
+/*  18. HERO CSS START
+/*----------------------------------------*/
+
+.hero{
+    &__area{}
+    &__height{
+        min-height: 950px;
+    }
+    &__content{
+        & span{
+            padding: 4px 8px;
+            color: $theme-color;
+            background: rgba($color: $theme-color, $alpha: .1);
+            @include border-radius(6px);
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        & h1{
+            font-size: 70px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: $black-4;
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+        & p{
+            font-size: 18px;
+            margin-bottom: 55px;
+        }
+    }
+    &__thumb{
+        position: absolute;
+        &-wrapper{
+            display: block;
+            width: 100%;
+            height: 100%;
+            @media #{$laptop}{
+                margin-left: 0;
+            }
+            @media #{$lg}{
+                margin-left: 0;
+            }
+            @media #{$md}{
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            @media #{$sm}{
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            @media #{$xs}{
+                margin-left: 0;
+                margin-top: 50px;
+            }
+        }
+        &.one{
+            top: 0;
+            left: 45px;
+        }
+        &.two{
+            left: 295px;
+            top: 0;
+        }
+        &.three{
+            top: 250px;
+            left: 0;
+        }
+        &.four{
+            left: 380px;
+            top: 320px;
+        }
+        & img{
+            @include border-radius(50%);
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            &.one{
+                top: 34%;
+                left: 8%;
+                @media #{$laptop}{
+                    top: 24%;
+                }
+                @media #{$md}{
+                    top: 20%;
+                }
+                @media #{$sm}{
+                    top: 20%;
+                }
+                @media #{$xs}{
+                    top: 20%;
+                }
+            }
+            &.two{
+                top: 53%;
+                left: 55%;
+            }
+            &.three{
+                top: 20%;
+                right: 3%;
+            }
+            &.four{
+                bottom: 6%;
+                right: 14%;
+            }
+            &.five{
+                bottom: 3%;
+                right: 0;
+            }
+            &.six{
+                left: 3%;
+                bottom: 0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.hero__content p{
+    line-height: 30px;
+}

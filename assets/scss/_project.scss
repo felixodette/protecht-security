@@ -1,0 +1,67 @@
+/*----------------------------------------*/
+/*  19. PROJECT CSS START
+/*----------------------------------------*/
+
+.project{
+    &__area{}
+    &__item{
+        padding: 60px;
+        @include border-radius(10px);
+        @media #{$md}{
+            padding: 30px;
+        }
+        @media #{$xs}{
+            padding: 20px;
+        }
+        &:hover{
+            & .project__no{
+                & h5{
+                    background: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__no{
+        & h5{
+            display: inline-block;
+            font-size: 26px;
+            color: $theme-color;
+            height: 45px;
+            width: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: rgba($color: $theme-color, $alpha: .1);
+            @include border-radius(50%);
+            margin-bottom: 25px;
+        }
+    }
+    &__content{
+        & h3{
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 55px;
+            & a{
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    &__thumb{
+        & img{
+            width: inherit !important;
+            max-width: 100% !important;
+            height: 200px;
+            @media #{$sm}{
+                height: auto;
+            }
+            @media #{$xs}{
+                height: auto;
+            }
+        }
+    }
+}
+.project__slider .slick-slide{
+    padding-right: 30px;
+}

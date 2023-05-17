@@ -1,0 +1,266 @@
+/*----------------------------------------*/
+/*  07. TEAM CSS START
+/*----------------------------------------*/
+
+.team{
+    &__area{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: -25px;
+            left: 0;
+            width: 100%;
+            background: url('../img/bg/wave-bg.png');
+            height: 140%;
+            z-index: -1;
+            @include background();
+            @media #{$lg}{
+                height: 132%;
+            }
+        }
+    }
+    &__item{
+        padding: 30px 35px;
+        background: $black-3;
+        @include border-radius(20px);
+        &-add{
+            background: $white;
+            &::after{
+                display: none;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -moz-linear-gradient( -130deg, rgb(221,36,255) 0%, rgb(132,31,249) 100%);
+            background-image: -webkit-linear-gradient( -130deg, rgb(221,36,255) 0%, rgb(132,31,249) 100%);
+            background-image: -ms-linear-gradient( -130deg, rgb(221,36,255) 0%, rgb(132,31,249) 100%);
+            background-image: linear-gradient( -130deg, rgb(221,36,255) 0%, rgb(132,31,249) 100%);
+            opacity: 0;
+        }
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+            & .team__info{
+                top: 35px;
+                visibility: visible;
+                opacity: 1;
+            }
+            & .team__social{
+                bottom: 35px;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__add{
+        padding: 113px 0;
+        & a{
+            font-size: 50px;
+            color: $grey-6;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+    &__thumb{
+        & img{
+            width: 200px;
+            height: 200px;
+            @include border-radius(50%);
+        }
+    }
+    &__content{
+        & h3{
+            font-size: 22px;
+            margin-bottom: 0;
+            color: $white;
+            text-transform: capitalize;
+        }
+        & span{
+            font-size: 15px;
+            color: $grey-5;
+        }
+    }
+    &__info{
+        position: absolute;
+        top:  10px;
+        left: 30px;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.3s);
+        & h3{
+            font-size: 22px;
+            margin-bottom: 0;
+            color: $white;
+            text-transform: capitalize;
+        }
+        & span{
+            font-size: 15px;
+            color: $grey-5;
+        }
+    }
+    &__social{
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.3s);
+        & ul{
+            & li{
+                display: inline-block;
+                margin-right: 7px;
+                & a{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    background: $purple;
+                    font-size: 14px;
+                    color: $white;
+                    @include border-radius(10px);
+                    &:hover{
+                        background: $white;
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+    &__details{
+        &-inner{
+            @include box-shadow(0px 50px 80px 0px rgba(3, 0, 53, 0.1));
+            @include border-radius(30px);
+        }
+        &-shape{
+            right: -11%;
+            bottom: -16%;
+            z-index: -1;
+            @media #{$laptop}{
+                right: 0;
+            }
+            @media #{$lg}{
+                right: 0;
+            }
+            @media #{$md}{
+                right: -3%;
+                bottom: -7%;
+            }
+            @media #{$sm}{
+                right: -3%;
+                bottom: -7%;
+            }
+            @media #{$xs}{
+                right: -3%;
+                bottom: -5%;
+            }
+        }
+        &-img{
+            @media #{$lg}{
+                margin-right: 30px;
+            }
+            @media #{$md}{
+                margin-right: 0px;
+            }
+            @media #{$sm}{
+                margin-right: 0px;
+            }
+            @media #{$xs}{
+                margin-right: 0px;
+            }
+           & img{
+                @include border-radius(30px 0 0 30px);
+           }
+        }
+        &-content{
+            @media #{$lg}{
+                padding-top: 40px;
+            }
+            @media #{$md}{
+                padding: 40px;
+            }
+            @media #{$sm}{
+                padding: 40px;
+            }
+            @media #{$xs}{
+                padding: 40px;
+            }
+            & > span{
+                font-size: 20px;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            & h3{
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 35px;
+                padding-right: 80px;
+            }
+        }
+        &-contact{
+            & ul{
+                & li{
+                    margin-bottom: 8px;
+                    display: flex;
+                    & .icon{
+                        & i{
+                            line-height: 27px;
+                            color: $theme-color;
+                            margin-right: 15px;
+                        }
+                    }
+                    & .text{
+                        & span{
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        &-social{
+            & ul{
+                & li{
+                    display: inline-block;
+                    margin-right: 7px;
+                    & a{
+                        position: relative;
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        background: $grey-10;
+                        font-size: 14px;
+                        @include border-radius(10px);
+                        &:hover{
+                            background: $theme-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        &-info{
+            & h4{
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

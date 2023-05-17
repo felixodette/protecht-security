@@ -1,0 +1,200 @@
+/*----------------------------------------*/
+/*  11. CONTACT CSS START
+/*----------------------------------------*/
+
+.contact{
+    &__area{
+        position: relative;
+    }
+    &__map{
+        height: 750px;
+        & iframe{
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+    }
+    &__wrapper{
+        position: absolute;
+        top: 50%;
+        left: 375px;
+        @include transform(translateY(-50%));
+        background: $white;
+        width: 870px;
+        min-height: 490px;
+        padding: 65px 60px;
+        padding-right: 70px;
+        @include box-shadow(0px 30px 50px 0px rgba(10, 0, 58, 0.08));
+        @media #{$laptop}{
+            left: 100px;
+        }
+        @media #{$lg}{
+            left: 0px;
+        }
+        @media #{$md}{
+            left: 30px;
+            width: 700px
+        }
+        @media #{$sm}{
+            left: 30px;
+            width: 500px;
+        }
+        @media #{$xs}{
+            left: 30px;
+            width: 280px;
+            padding: 30px;
+        }
+    }
+    &__info{
+        @media #{$md}{
+            margin-right: 0;
+        }
+        @media #{$sm}{
+            margin-right: 0;
+        }
+        @media #{$xs}{
+            margin-right: 0;
+        }
+        & h3{
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 25px;
+            @media #{$xs}{
+                font-size: 36px;
+            }
+        }
+        & ul{
+            & li{
+                margin-bottom: 40px;
+                &:last-child{
+                    margin-bottom: 0 !important;
+                }
+                & h4{
+                    font-size: 16px;
+                    font-family: $lato;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+                & p{
+                    margin-bottom: 0;
+                    & a{
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__form{
+        width: 50%;
+        margin-top: 5px;
+        @media #{$sm}{
+            width: 100%;
+            margin-top: 50px;
+        }
+        @media #{$xs}{
+            width: 100%;
+            margin-top: 50px;
+        }
+        & input,
+        & textarea{
+            height: 50px;
+            line-height: 46px;
+            color: $black;
+            width: 100%;
+            background: $grey-9;
+            border: 2px solid transparent;
+            @include border-radius(10px);
+            margin-bottom: 15px;
+            padding: 0 15px;
+            &::placeholder{
+                font-size: 13px;
+                text-transform: capitalize;
+                color: $body-text-color;                
+            }
+            &:focus{
+                border-color: $theme-color;
+                background: $white;
+                outline: none;
+                &::placeholder{
+                    opacity: 0;
+                }
+            }
+        }
+        & textarea{
+            height: 120px;
+            resize: none;
+        }
+    }
+    &__help{
+        &-item{
+            padding: 50px 100px;
+            @include box-shadow(0px 30px 60px 0px rgba(10, 0, 58, 0.1));
+            @media #{$md}{
+                padding: 50px;
+            }
+            @media #{$xs}{
+                padding: 30px 15px;
+            }
+        }
+    }
+    &__icon{
+
+    }
+    &__text{
+        & h3{
+            font-size: 26px;
+        }
+        & p{
+            margin-bottom: 35px;
+        }
+    }
+    &__shape{
+        & img{
+            position: absolute;
+            &.dot{
+                left: 12%;
+                top: 36%;
+                @media #{$lg}{
+                    left: 0%;
+                }
+                @media #{$md}{
+                    left: 2%;
+                }
+                @media #{$sm}{
+                    left: 2%;
+                    top: 24%;
+                }
+                @media #{$xs}{
+                    left: 2%;
+                    top: 24%;
+                }
+            }
+            &.shape{
+                top: 25%;
+                left: 16%;
+                opacity: .04;
+                @media #{$lg}{
+                    left: 9%;
+                }
+                @media #{$md}{
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                }
+                @media #{$sm}{
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                }
+                @media #{$xs}{
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,213 @@
+/*----------------------------------------*/
+/*  00. Footer CSS START
+/*----------------------------------------*/
+
+.footer{
+    &__area{}
+    &__widget{
+        &-3{
+            @media #{$lg}{
+                margin-left: 0;
+            }
+            @media #{$md}{
+                margin-left: 0;
+            }
+            @media #{$sm}{
+                margin-left: 0;
+            }
+            @media #{$xs}{
+                margin-left: 0;
+            }
+        }
+        &-title{
+            & h4{
+                font-size: 24px;
+                font-weight: 900;
+                margin-bottom: 25px;
+            }
+        }
+        &-content{
+            &-2{
+                & p{
+                    color: #d1cfdd;
+                }
+            }
+        }
+    }
+    &__links{
+        & ul{
+            & li{
+                margin-bottom: 10px;
+                & a{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        width: 0;
+                        height: 1px;
+                        bottom: 0;
+                        position: absolute;
+                        left: auto;
+                        right: 0;
+                        transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+                        background: $theme-color;
+                    }
+                    &:hover{
+                        color: $theme-color;
+                        &::before{
+                            width: 100%;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+        &-2{
+            & ul{
+                & li{
+                    & a{
+                        color: #d1cfdd;
+                        &::before{
+                            background: $white;
+                        }
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__info{
+        & ul{
+            & li{
+                margin-bottom: 8px;
+                display: flex;
+                & .icon{
+                    & i{
+                        line-height: 27px;
+                        color: $theme-color;
+                        margin-right: 15px;
+                    }
+                }
+                & .text{
+                    & span{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    &__copyright{
+        border-top: 1px solid $border-7;
+        padding: 25px 0;
+        &-2{
+            border-top: 1px solid #3f395c;
+        }
+        &-inner{
+            border-top: 1px solid $border-7;
+            padding: 25px 0;
+        }
+        &-text{
+            & p{
+                margin-bottom: 0;
+                & a{
+                    font-weight: 700;
+                    color: $black;
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+            &-2{
+                & p{
+                    color: #868395;
+                    & a{
+                        color: $white;
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__social{
+        @media #{$sm}{
+            float: left;
+            margin-top: 20px;
+        }
+        @media #{$xs}{
+            float: left;
+            margin-top: 20px;
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                margin-right: 7px;
+                & a{
+                    position: relative;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    background: $grey-10;
+                    font-size: 14px;
+                    @include border-radius(10px);
+                    &:hover{
+                        background: $purple;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-2{
+            & ul{
+                & li{
+                    & a{
+                        background: #363054;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__subscribe{
+        & input{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            background: $white;
+            border: none;
+            @include box-shadow(0px 2px 4px 0px rgba(2, 0, 40, 0.08));
+            @include border-radius(4px);
+            &::placeholder{
+                font-weight: 500;
+                color: #686777;
+            }
+            &:focus{
+                border: none;
+                outline: none;
+                &::placeholder{
+                    opacity: 0;
+                }
+            }
+        }
+        & button{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: $white;
+            background: $theme-color;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            padding: 0 15px;
+            @include border-radius(0 4px 4px 0);
+        }
+    }
+}
