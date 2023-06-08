@@ -40,7 +40,7 @@
 
         // FIXME: Update this to your desired email address.
 
-        $recipient = "admin@themepure.net";
+        $recipient = "support@protechtsecurity.co.ke";
 
 
 

@@ -71,16 +71,16 @@
         z-index: 11;
     }
     &__top{
-        border-bottom: 1px solid $border-2;
+        border-bottom: 0 solid $border-2;
         &-4{
-            border-bottom: 1px solid #f0f0f1;
+            border-bottom: 0 solid #f0f0f1;
         }
     }
     &__social{
         & ul{
             & li{
                 display: inline-block;
-                border-right: 1px solid $border-2;
+                border-right: 0 solid $border-2;
                 margin-left: -3px;
                 &:last-child{
                     border-right: 0;
@@ -106,7 +106,7 @@
                 display: inline-block;
                 margin-left: 30px;
                 padding-left: 20px;
-                border-left: 1px solid $border-2;
+                border-left: 0 solid $border-2;
                 @media #{$md}{
                     margin-left: 15px;
                 }
